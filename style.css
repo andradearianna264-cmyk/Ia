@@ -1,0 +1,47 @@
+/* Custom Styles for StudyVerse Asistente Académico */
+
+/* Transición suave global de colores para el cambio de tema Dark/Light */
+* {
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Personalización del Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Transiciones del Carrusel */
+.carousel-slide {
+  will-change: transform, opacity;
+}
+
+/* Animación pulse suave para estado de voz activo */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.speaking-active {
+  animation: pulseGlow 1.5s infinite ease-in-out;
+}
